@@ -41,13 +41,14 @@ const Contact = () => {
       setErrorMessage("");
 
       try {
-        const response = await fetch("https://your-api-endpoint.com/contact", {
+        const response = await fetch("http://localhost:5000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
+        
 
         if (response.ok) {
           const data = await response.json();
@@ -67,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="py-8">
+    <div id="Contact" className="py-8">
       <h1 className="text-center p-6 mb-12 text-4xl bg-slate-300 font-bold">
         Contact Me
       </h1>
